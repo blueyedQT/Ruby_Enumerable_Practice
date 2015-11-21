@@ -31,7 +31,7 @@ RSpec.describe MyEnumerable do
 	end
 
 	describe "my_map" do 
-		it "returns ne array with each element modified by block" do 
+		it "returns an array with each element modified by block" do 
 			arr = [1, 2, 3]
 			output = arr.my_map { |num| num * 2 }
 			expect(output).to eq([2, 4, 6])

@@ -1,16 +1,21 @@
 module MyEnumerable
 	def my_each
-		if block_given?
-			puts self.each { |e| yield(e) }
-		end
+		each { |e| yield(e) }
+	end
+
+	def my_select
+		[].tap { |out| each { |e| out << e if yield(e) } }	
+	end
+
+	def my_reject
+		[].tap { |out| each { |e| out << e if !yield(e) } }
+	end
+
+	def my_map
+		[].tap { |out| each { |e| out << yield(e) } }
 	end
 end
 
 class Array
 	include MyEnumerable 
 end
-
-# arr = [12, 24, 8, 9]
-# output = []
-# arr.my_each { |x| x }
-# 	#output << x + 20 }
