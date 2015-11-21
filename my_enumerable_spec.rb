@@ -1,7 +1,7 @@
 require_relative 'my_enumerable'
 
 class Array
-	includes MyEnumerable 
+	include MyEnumerable 
 end
 
 RSpec.describe MyEnumerable do 

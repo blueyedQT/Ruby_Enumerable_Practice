@@ -1,2 +1,2 @@
-module myEnumerable
+module MyEnumerable
 end
