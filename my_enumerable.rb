@@ -1,0 +1,2 @@
+module myEnumerable
+end
